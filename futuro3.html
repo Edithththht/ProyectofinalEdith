@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title>cuarto</title>
+<style>
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: lightyellow;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#imagen1 {
+    width: 250vh;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+#imagen2 {
+    left: 3vw; top: 75vh; width: 8vw;
+    position: absolute;
+}
+#video1 {
+    width: 250vh;
+    display: none; /* hidden by default */
+}
+</style>
+</head>
+<body>
+
+    <img src="fn.jpg" alt="imagen1" id="imagen1">
+
+    <video id="video1" controls>
+        <source src="fn.m4a" type="video/mp4">
+        Tu navegador no soporta video.
+    </video>
+    <a href="presente7.html"><img src="regresar.png" class="link-image" alt="cuarto" id="imagen2"></a>
+<script>
+const img = document.getElementById('imagen1');
+const video = document.getElementById('video1');
+
+img.addEventListener('click', () => {
+    if (video.style.display === 'none') {
+        video.style.display = 'block';
+        video.play();
+    } else {
+        if (video.paused) {
+            video.play();
+        } else {
+            video.pause();
+        }
+    }
+});
+</script>
+</body>
+</html>
