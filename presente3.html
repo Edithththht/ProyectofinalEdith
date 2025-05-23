@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title>Flashback</title>
+<style>
+body {
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+    background-color: lightyellow;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 100vh;
+}
+
+#imagen1, #imagen2, #imagen3 {
+    width: 75vw;
+    height: 75vh;
+    object-fit: contain;
+    position: absolute;
+    top: 25%;
+    left: 12%;
+    z-index: -1;
+}
+#imagen2, #imagen3 {
+    display: none;
+}
+#imagen4 { left: 3vw; top: 14vh; width: 35vh;
+    position: absolute;
+}
+#imagen5 { right: 3vw; top: 13vh; width: 33vh; 
+    position: absolute;
+}
+
+</style>
+</head>
+<body>
+    <div class="container">
+        <a href="cuarto3.html"><img src="pcn2.jpeg" class="link-image" alt="cuarto" id="imagen4"></a>
+        <a href="futuro3.html"><img src="pfm1.jpeg" class="link-image" alt="cuarto" id="imagen5"></a>
+            <img src="cc2.png" class="image" alt="imagen1" id="imagen1">
+            <img src="dc2.png" class="image" alt="imagen2" id="imagen2">
+            <img src="ic2.png" class="image" alt="imagen3" id="imagen3">
+        
+    </div>
+
+<script>
+    function mouseMoved(event) {
+        const mouseX = event.clientX;
+        const screenWidth = window.innerWidth;
+
+        document.querySelectorAll('.image').forEach(img => img.style.display = 'none');
+        
+        if (mouseX < screenWidth / 3) {
+            document.getElementById('imagen3').style.display = 'block';
+        } else if (mouseX >= screenWidth / 3 && mouseX <= 2 * screenWidth / 3) {
+            document.getElementById('imagen1').style.display = 'block';
+        } else {
+            document.getElementById('imagen2').style.display = 'block';
+        }
+    }
+    document.addEventListener('mousemove', mouseMoved);
+</script>
+</body>
+</html>
