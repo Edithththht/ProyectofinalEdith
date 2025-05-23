@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title>cuarto</title>
+<style>
+body {
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+    background-color: whitesmoke;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#imagen1 {
+    position: absolute; 
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.overlay {
+    position: absolute;
+    width: 10%;
+    height: auto;
+    object-fit: contain;
+}
+#imagen2 { left: 7vw; top: 8vh; width: 15vw; }
+#imagen3 { left: 63vw; top: 49vh; width: 13vw; transform: rotate(-37deg);}
+#imagen4 { right: 19vw; top: 52vh; width: 11vw; }
+#imagen5 { left: 17vw; top: 35vh; width: 7vw; }
+</style>
+</head>
+<body>
+    <div class="container">
+        <img src="cup4.png" alt="imagen1" id="imagen1">
+        <a href="fp2.html"><img src="fp4.png" alt="imagen2" id="imagen2" class="overlay"></a>
+        <a href="l1.html"><img src="lp4.png" alt="imagen3" id="imagen3" class="overlay"></a>
+        <a href="lp2.html"><img src="lp24.png" alt="imagen4" id="imagen4" class="overlay"></a>
+        <a href="vp1.html"><img src="vp4.png" alt="imagen5" id="imagen5" class="overlay"></a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title>cuarto</title>
+<style>
+body {
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+    background-color: whitesmoke;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#imagen1 {
+    position: absolute; 
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.overlay {
+    position: absolute;
+    width: 10%;
+    height: auto;
+    object-fit: contain;
+}
+#imagen2 { left: 37vw; top: 18vh; width: 8vw; }
+#imagen3 { left: 80vw; top: 43vh; width: 9vw; }
+#imagen4 { right: 51vw; top: 62vh; width: 11vw; }
+#imagen5 { left: 53vw; top: 16vh; width: 10vw; transform: rotate(-1deg); }
+#imagen6 { right: 35vw; top: 38vh; width: 11vw; transform: rotate(13deg);}
+</style>
+</head>
+<body>
+    <div class="container">
+        <img src="cuartoc.jpeg" alt="imagen1" id="imagen1">
+        <a href="f3.html"><img src="fc2.png" alt="imagen2" id="imagen2" class="overlay"></a>
+        <a href="la3.html"><img src="lac2.png" alt="imagen3" id="imagen3" class="overlay"></a>
+        <a href="l3.html"><img src="lc2.png" alt="imagen4" id="imagen4" class="overlay"></a>
+        <a href="p3.html"><img src="pc2.jpeg" alt="imagen5" id="imagen5" class="overlay"></a>
+        <a href="o3.html"><img src="oc2.png" alt="imagen6" id="imagen6" class="overlay"></a>
+    </div>
+</body>
+</html>
