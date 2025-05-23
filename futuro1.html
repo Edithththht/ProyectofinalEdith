@@ -23,34 +23,35 @@ body {
     left: 3vw; top: 75vh; width: 8vw;
     position: absolute;
 }
-#video1 {
-    width: 250vh;
+#audio1 {
     display: none; /* hidden by default */
 }
 </style>
 </head>
 <body>
 
-    <img src="fm1.png" alt="imagen1" id="imagen1">
+<img src="fm1.png" alt="imagen1" id="imagen1">
 
-    <video id="video1" controls>
-        <source src="fm.m4a" type="video/mp4">
-        Tu navegador no soporta video.
-    </video>
-    <a href="presente1.html"><img src="regresar.png" class="link-image" alt="cuarto" id="imagen2"></a>
+<audio id="audio1" controls>
+    <source src="fm.m4a" type="audio/mp4">
+    Tu navegador no soporta audio.
+</audio>
+
+<a href="presente3.html"><img src="regresar.png" class="link-image" alt="cuarto" id="imagen2"></a>
+
 <script>
 const img = document.getElementById('imagen1');
-const video = document.getElementById('video1');
+const audio = document.getElementById('audio1');
 
 img.addEventListener('click', () => {
-    if (video.style.display === 'none') {
-        video.style.display = 'block';
-        video.play();
+    if (audio.style.display === 'none') {
+        audio.style.display = 'block';
+        audio.play();
     } else {
-        if (video.paused) {
-            video.play();
+        if (audio.paused) {
+            audio.play();
         } else {
-            video.pause();
+            audio.pause();
         }
     }
 });
